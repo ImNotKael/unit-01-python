@@ -6,7 +6,10 @@ Print both the original variable and the converted integer.
 """
 a = 3.0
 b = int(a)
+print()
+print(a)
 print(b)
+(print)
 
 # Made the variable, "a" as a float variable. Then used another variable, "b" to convert the floating variable to an integer.
 # Once done I print NOT the variable A, but the variable B
@@ -18,12 +21,14 @@ it's positive, negative, or zero using if-elif-else statements.
 """
 
 a = 0
+print()
 if a < 0:
     print("negative")
 elif a > 0:
     print("positive")
 else:
     print("Number is zero")
+print()
 
 # Made one variable, "a". Used if, elif, and else to determine if the variable is positive, negative, or 0.
 
@@ -36,7 +41,9 @@ performs addition, subtraction, multiplication, and division, and prints the res
 
 a = 2
 b = 4.0
+print()
 print(a + b)
+print()
 
 # Created two variables, then printed these variables adding up for the result.
 
@@ -51,7 +58,9 @@ Dico = {
     'orange': 1,
     'grapes': 2
 }
+print()
 print(Dico["grapes"])
+print()
 
 # Made a dictonary with two variables, with given name and number. Then printed out the string name using the bracket so the dictonary can work
 
@@ -78,4 +87,9 @@ Then create another version using " - " as the separator.
 Print both the original list and both joined strings.
 """
 
-x = []
+subjects = ["Science" , "Math" , "Computer Science"]
+thing = "-".join(subjects)
+print()
+print(subjects)
+print(thing)
+print()
