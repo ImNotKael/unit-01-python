@@ -87,6 +87,8 @@ Then create another version using " - " as the separator.
 Print both the original list and both joined strings.
 """
 
+# Created a list, created a join variable. Added subjects what I like and used the join command to print out two different types of lists.
+
 subjects = ["Science" , "Math" , "Computer Science"]
 thing = "-".join(subjects)
 print()
