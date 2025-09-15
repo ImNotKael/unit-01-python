@@ -66,7 +66,9 @@ The result should be rounded to the nearest tenth (1 decimal place)
 
 # Create two variables
 a = 1 / 3
+# Use formatting method in order to round to nearest tenth.
 b = f"Result {a:.1f}"
+
 
 print()
 print(b)
