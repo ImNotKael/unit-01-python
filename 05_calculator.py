@@ -21,12 +21,15 @@ result = input("What operation do you want to use? (TYPE ONLY THE NUMBER ON TOP)
 if result == "1":
     print("Result: ")
     print(x + y)
+
 elif result == "2":
     print("Result: ")
     print(x - y)
+
 elif result == "3":
     print("Result: ")
     print(x * y)
+
 elif result == "4":
     # Since you canot divide by 0 and if y == 0, made sure the new if statement is nested by the "elif" statement
     # so it would cause no error.
@@ -35,15 +38,23 @@ elif result == "4":
     else:
         print("Result: ")
         print(x / y)
+
 elif result == "5":
     print("Result: ")
     print(x ** y)
+
 elif result == "6":
-    print("Result: ")
-    print(x // y)
+    # Also made sure you cannot divide by 0 here since it is undefined.
+    if y == 0:
+        print("Error: Cannot divide by 0.")
+    else:
+        print("Result: ")
+        print(x // y)
+
 elif result == "7":
     print("Result: ")
     print(x % y)
+
     # Made sure the else statement would be very invalid
 else:
     print("INVALID OPTION!")
