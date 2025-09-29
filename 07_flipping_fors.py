@@ -68,3 +68,4 @@ dictionary = {
 # so it prints out only numbers.
 for x in dictionary:
     print(dictionary[x])
+
