@@ -14,7 +14,7 @@ while True:
         del my_list[index-1]
     else:
         print("Invalid")
-        print()
+        print() 
     print()
     for x in my_list:
         print(x)
