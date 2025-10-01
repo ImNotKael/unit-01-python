@@ -1,8 +1,8 @@
 # Created a list so anything can be added
-my_list = []
+open()
 
 print()
-print("You have nothing on your list!")
+print("You have nothing on your list! \n")
 print()
 # Made sure to use while TRUE so the input gets to keep on asking whether if the user will add or remove something
 while True:
