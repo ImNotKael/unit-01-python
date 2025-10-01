@@ -20,6 +20,3 @@ while True:
         print(x)
     print()
 
-
-
-
