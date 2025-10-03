@@ -1,4 +1,5 @@
 # Created a list so anything can be added
+my_list = []
 open()
 
 print()
