@@ -15,9 +15,7 @@ Task 2 (os module):
 Create a new directory called "test_folder" in the current directory.
 Then print a list of all files and directories in the current directory.
 """
-print("Task 2:")
-
-test_folder = "test_folder"#create a variable for the new folder
+print("Task 2:")test_folder = "test_folder"#create a variable for the new folder
 
 if not os.path.exists(test_folder):#checks if the folder exists
     os.mkdir(test_folder)
