@@ -5,6 +5,7 @@ Write a Python program that prints the current date and time using the datetime 
 """
 
 my_date = datetime.today()
+print("TASK 1")
 print(my_date)
 
 """
@@ -15,6 +16,8 @@ Using the strftime function format the date in standard U.S. date format (MM/DD/
 
 my_date = datetime.today()
 my_string = my_date.strftime("%m/%d/%Y , %X")
+print()
+print("TASK 2")
 print(my_string)
 
 
