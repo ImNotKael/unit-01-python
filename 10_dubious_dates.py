@@ -27,7 +27,15 @@ Using the strptime function, convert two strings into dates.
 Then find the difference in days between the two.
 """
 
-
+date_string1 = "2023-01-15"
+date_string2 = "2024-06-10" 
+date_format = "%Y-%m-%d"
+date1 = datetime.strptime(date_string1, date_format)
+date2 = datetime.strptime(date_string2, date_format)
+difference = date2 - date1
+print()
+print("TASK 3")
+print(f"The difference between {date_string1} and {date_string2} is {difference.days} days.")
 
 """
 Excercise 4:

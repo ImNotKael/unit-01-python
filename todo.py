@@ -1,10 +1,10 @@
-# Created a list so anything can be added
-my_list = []
-open()
+# Created a list so anything can be added or removed
 
+open("todo.py", "a").close()
 print()
 print("You have nothing on your list! \n")
 print()
+my_list = []
 # Made sure to use while TRUE so the input gets to keep on asking whether if the user will add or remove something
 while True:
     addedlist = input("Would you like to add or remove inside your list? ")
