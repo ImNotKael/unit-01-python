@@ -5,29 +5,34 @@ import sys
 Task 1 (os module):
 Write a Python program that prints the current folder (working directory) using the os module.
 """
-print("Task 1:")
-directory = os.getcwd#create a variable for directory
 
-print("Current working directory:", directory)#print the working directory
+# Created a variable to get the current working directory and printed it out.
+print("TASK 1")
+current_directory = os.getcwd()
+print(current_directory)
+
 
 """
 Task 2 (os module):
 Create a new directory called "test_folder" in the current directory.
 Then print a list of all files and directories in the current directory.
 """
-print("Task 2:")
-test_folder = "test_folder"#create a variable for the new folder
 
-if not os.path.exists(test_folder):#checks if the folder exists
-    os.mkdir(test_folder)
-    print(f"Directory '{test_folder}' created.")
+# Created a variable for the new directory name "test_folder".
+# Used an if statement to check if the directory already exists. If it doesn't exist, it creates it.
+# Then created a variable to list all files and directories in the current directory and printed them out.
+# Used a for loop to print each item in the list on a new line from creating "all_items".
+print()
+print("TASK 2")
+new_directory = "test_folder"
+if not os.path.exists(new_directory):
+    os.makedirs(new_directory)
+    print(f"Directory '{new_directory}' created.")
 else:
-    print(f"Directory '{test_folder}' already exists.")
-
-list = os.listdir('.')#list all the files and directs in the test folder
-
+    print(f"Directory '{new_directory}' already exists.")
+all_items = os.listdir('.')
 print("Files and directories in the current directory:")
-for item in list:#prints each item in the list
+for item in all_items:
     print(item)
 
 """
@@ -36,29 +41,32 @@ Write a program that checks if a directory called "data" exists in the current
 working directory. If it doesn't exist, create it. If it does exist, print 
 "Directory already exists."
 """
-print("Task 3:")
-directory_name = "data"#creates a vairbale for the directory name
-directory_path = os.getcwd()#create a variable for the directory path
-direct_path = os.path.join(directory_path, directory_name)#creates a vraible for direct path
-if not os.path.exists(direct_path):#checks if the directory exists
-    print("Directory already exists.")
 
+# Created a variable for the date directory name as "data".
+# Used an if statement to check if the directory already exists. If it doesn't exist, it creates it.
+print()
+print("TASK 3")
+data_directory = "data"
+if not os.path.exists(data_directory):
+    os.makedirs(data_directory)
+    print(f"Directory '{data_directory}' created.")
 else:
-    os.mkdir(direct_path)
-    print(f"Directory '{directory_name}' created at {direct_path}.")
+    print("Directory already exists.")
 
 """
 Task 4 (os.path module):
 Write a program that checks if a file called "config.txt" exists in the current directory.
 If it exists, print its path. If it doesn't exist, print "File not found."
 """
-print("Task 4:")
-filename = "config.txt"#creates a varibale for the filename
 
-file_path = os.path.join(os.getcwd(), filename)#create file path by joining the current working directory and filename
-
-if not os.path.isfile(file_path):#checks if the file is found
-    print(f"File found at: {file_path}")
+# Created file_name as a variable for "config.txt".
+# Used an if statement to check if the file exists using os.path.isfile.
+print()
+print("TASK 4")
+file_name = "config.txt"
+if os.path.isfile(file_name):
+    file_path = os.path.abspath(file_name)
+    print(f"File path: {file_path}")
 else:
     print("File not found.")
 
@@ -66,8 +74,13 @@ else:
 Task 5 (sys module):
 Write a program that prints the Python version you are currently using.
 """
-print("Task 5:")
-print("Python version:", sys.version)#prints the python version
+
+# Created a python version variable to get the current Python version and printed it out.
+# Shows us what version of Python we are using.
+print()
+print("TASK 5")
+python_version = sys.version
+print(f"Python version: {python_version}")
 
 """
 Task 6 (sys module):
@@ -75,12 +88,20 @@ Write a program that prints the platform your Python interpreter is running on
 (e.g., 'linux', 'win32', 'darwin'). The output should be user friendly names
 "Linux", "Windows", "MacOS"
 """
-print("Task 6:")
-platform_ID = sys.platform#creates a vairable for the platform IF
-platform = {#creats a dictionary for the platform names
-    'linux': 'linux',
-    'win32': 'Windows',
-    'darwin': 'MacOS',
-    'e.g.,': 'e.g.,'
-}
-print("Platform:", platform.get(platform_ID, f"Unknown ({platform_ID})"))#prints the platform name or unknown
+
+# Created a platform variable to get the current platform and used conditional statements to check which platform it is.
+# Then printed out the platform with their aligned window friendly names.
+# Used startswith for linux incase of different distributions.
+print()
+print("TASK 6")
+# Sys platforms defines based on what OS you are using right now.
+platform = sys.platform
+if platform.startswith('linux'):
+    platform_name = "Linux"
+elif platform == 'win32':
+    platform_name = "Windows"
+elif platform == 'darwin':
+    platform_name = "MacOS"
+else:
+    platform_name = "Unknown"
+print(f"Platform: {platform_name}")
