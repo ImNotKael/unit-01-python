@@ -30,9 +30,6 @@ print("TASK 2")
 Created a function that squares a number.
 """
 def square(a, b):
-    """
-    Used the return statement to return the squared number.
-    """
     return a ** b
 
 """

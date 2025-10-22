@@ -45,6 +45,7 @@ elif result == "5":
 
 elif result == "6":
     # Also made sure you cannot divide by 0 here since it is undefined.
+    # check if y is zero since you cannot divide by zero
     if y == 0:
         print("Error: Cannot divide by 0.")
     else:
