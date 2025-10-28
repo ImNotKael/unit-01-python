@@ -88,3 +88,5 @@ class BankAccount():
             print("Success!")
         else:
             print("Error.")
+
+print(BankAccount(Kael))
