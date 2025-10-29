@@ -48,7 +48,7 @@ class Dog(Animal):
 class Cat(Animal):
     def speak(self):
         # printed meow because this is a cat
-        print("Cat: Meow!")
+        print("Meow!")
 
 
 # Two variables = classes so it prints out on what they will speak.
@@ -71,22 +71,23 @@ Test these methods with instances of the class.
 print()
 print("TASK 3: ")
 
-class BankAccount():
-    def __init__(self, owner):
-        # Saved the variable names for managing money and displaying name
-        self.balance = 0
-        self.owner = ""
-    
-    def deposit(self, amount):
-        if amount > 0:
-            print("Success!")
-        else:
-            print("Error")
-    
-    def withdraw(self, amount):
-        if amount > 0:
-            print("Success!")
-        else:
-            print("Error.")
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
 
-print(BankAccount(Kael))
+    # Adds money to the balance
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"+${amount}")
+
+    # Withdraws money from the balance
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds!")
+        else:
+            self.balance -= amount
+            print(f"-${amount}")
+bank_account = BankAccount("Kael", 1000)
+bank_account.deposit(40)
+bank_account.withdraw(10)
